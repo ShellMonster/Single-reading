@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "UserModel.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +17,13 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    self.window.backgroundColor = [UIColor whiteColor];
+    [UserModel shareUser].name = @"慵懒的程序猿";
+    [UserModel shareUser].sex = @"男";
+    [UserModel shareUser].born = @"1993年10月1日";
+    [UserModel shareUser].Icon = [UIImage imageNamed:@"Expression_1"];
+    
     return YES;
 }
 
